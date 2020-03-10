@@ -1,9 +1,12 @@
 //Calculator.java
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
 public class Calculator extends JFrame implements ActionListener
 {
 	JLabel lblX=new JLabel("X:");
 	JLabel lblY=new JLabel("Y:");
-	JLabel lblResult=new JLabel("Answer:");
+	JLabel lblResult=new JLabel("Result:");
 	JTextField txtX=new JTextField(10);
 	JTextField txtY=new JTextField(10);
 	JTextField txtResult=new JTextField(10);
@@ -37,11 +40,11 @@ public class Calculator extends JFrame implements ActionListener
 		else
 		if(source==btnPlus)
 		{
-			int x=Integer.parseInt(txtX.getString());
-			int y=Integer.pareseInteger(txtY.getString());
+			int x=Integer.parseInt(txtX.getText());
+			int y=Integer.parseInt(txtY.getText());
 			int sum=x+y;
 			Integer total=new Integer(sum);
-			txtResult.setString(total.toString());
+			txtResult.setText(total.toString());
 		}
 	}
 }
